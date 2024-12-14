@@ -31,7 +31,7 @@ if ingredients_list:
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
 
-    st.write(ingredients_string)
+    #st.write(ingredients_string)
 
  
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients, NAME_ON_ORDER)
@@ -47,6 +47,7 @@ if ingredients_list:
         st.success('Your Smoothie is ordered !', icon="✅")
 
 # New section to display smoothiefroot nutrition information
+
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 st.text(smoothiefroot_response.json())
